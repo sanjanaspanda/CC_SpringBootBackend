@@ -1,4 +1,5 @@
 package com.careconnect.repository;
+
 import com.careconnect.collections.News;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
@@ -12,7 +13,6 @@ import java.util.Date;
 @Repository
 
 public interface NewsRepository extends MongoRepository<News, String> {
-
   List<News> findByTitle(String title);
 
   List<News> findByDescription(String description);
@@ -36,4 +36,3 @@ public interface NewsRepository extends MongoRepository<News, String> {
   List<News> findTop5ByOrderByDateDesc();
 
 }
-

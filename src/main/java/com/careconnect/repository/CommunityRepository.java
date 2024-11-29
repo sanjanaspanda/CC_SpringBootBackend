@@ -11,7 +11,6 @@ import java.util.List;
 @Repository
 
 public interface CommunityRepository extends MongoRepository<Community, String> {
-
   List<Community> findByCommName(String commName);
 
   List<Community> findByCommLocation(String commLocation);

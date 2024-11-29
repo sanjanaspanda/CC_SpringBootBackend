@@ -1,6 +1,5 @@
 package com.careconnect.collections;
 
-
 import org.springframework.data.annotation.Id;
 
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -11,94 +10,104 @@ import java.util.List;
 
 public class Posts {
 
- @Id
+    @Id
 
- private String postId;
+    private String postId;
 
- private String userId;
+    private String userId;
 
- private String description;
+    private String description;
 
- private int likes;
+    private int likes;
 
- private List<String> comments;
+    private List<Comment> comments;
 
- // Constructors
+    private String userName;
 
- public Posts() {
+    // Constructors
 
- }
+    public String getUserName() {
+        return userName;
+    }
 
- public Posts(String userId, String description) {
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
-  this.userId = userId;
+    public Posts() {
 
-  this.description = description;
+    }
 
-  this.likes = 0;
+    public Posts(String userId, String description) {
 
- }
+        this.userId = userId;
 
- // Getters and Setters
+        this.description = description;
 
- public String getPostId() {
+        this.likes = 0;
 
-  return postId;
+    }
 
- }
+    // Getters and Setters
 
- public void setPostId(String postId) {
+    public String getPostId() {
 
-  this.postId = postId;
+        return postId;
 
- }
+    }
 
- public String getUserId() {
+    public void setPostId(String postId) {
 
-  return userId;
+        this.postId = postId;
 
- }
+    }
 
- public void setUserId(String userId) {
+    public String getUserId() {
 
-  this.userId = userId;
+        return userId;
 
- }
+    }
 
- public String getDescription() {
+    public void setUserId(String userId) {
 
-  return description;
+        this.userId = userId;
 
- }
+    }
 
- public void setDescription(String description) {
+    public String getDescription() {
 
-  this.description = description;
+        return description;
 
- }
+    }
 
- public int getLikes() {
+    public void setDescription(String description) {
 
-  return likes;
+        this.description = description;
 
- }
+    }
 
- public void setLikes(int likes) {
+    public int getLikes() {
 
-  this.likes = likes;
+        return likes;
 
- }
+    }
 
- public List<String> getComments() {
+    public void setLikes(int likes) {
 
-  return comments;
+        this.likes = likes;
 
- }
+    }
 
- public void setComments(List<String> comments) {
+    public List<Comment> getComments() {
 
-  this.comments = comments;
+        return comments;
 
- }
+    }
+
+    public void setComments(List<Comment> comments) {
+
+        this.comments = comments;
+
+    }
 
 }
